@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The forbidden sector</title>
+    <script>
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * max);
+        }
+
+        function generateTeapot() {
+            if(getRandomInt(100) != 0) return;
+            document.getElementById('code').innerText = "418 I'm a teapot"
+        }
+
+        document.addEventListener('DOMContentLoaded', () => generateTeapot())
+    </script>
+</head>
+<body>
+    <h1 id="code">403 Forbidden</h1>
+    <p id="message">This is the forbidden sector.<br>You can't go here.<br>No one can&hellip; Not since <span class="glitch">the incident</span>.</p>
+    <a id="linkback" href="/scenes/27">&lt;&lt;&lt; Go back</a>
+</body>
+</html>
+
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+    html {
+        height: 100%;
+    }
+
+    body {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        background-color: red;
+        font-family: 'Rubik', sans-serif;
+        gap: 1rem;
+        height: 100%;
+        margin: 0;
+    }
+
+    #code,#message,#linkback {
+        background-color: black;
+        color:red;
+        padding: 1rem;
+        margin: 0;
+    }
+
+    #message {
+        text-align: center;
+    }
+
+    .glitch {
+        font-family: 'Rubik Glitch', monospace;
+    }
+</style>
